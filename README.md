@@ -1,6 +1,5 @@
 # Predictive Analysis: Predicting Credit Card Default
 
-###### Disclaimer
 
 ### TABLE OF CONTENTS
 * [Abstract](#Abstract)
