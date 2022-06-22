@@ -6,7 +6,7 @@
 * [Introduction](#Introduction)
 * [Related Work](#Related-Work)
 * [Model](#Model)
-* [Experimental Results](#Results)
+* [Results](#Results)
 * [Conclusion](#Conclusion)
 
 ## Abstract
