@@ -27,3 +27,14 @@ The purpose of this project is to determine the best model that can identify cre
 
 As such, the optimal outcome of this project will be to apply the chosen final model to reduce the default rate via classifying the credit card clients accurately into default and non-default.
 
+
+## Related Work
+
+
+## Model
+
+
+## Experimental Results
+
+
+## Conclusion
