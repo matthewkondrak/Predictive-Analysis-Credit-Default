@@ -39,7 +39,7 @@ Furthermore, data level resampling techniques are being explored to overcome the
 ## Models
 **Logistic Regression**
 
-The logistic regression model is a classification algorithm when the targeted data is categorical in nature. It is a statistical method for analyzing a dataset when the data has a binary or multinomial output, such as when it belongs to one class or another, or if it is either a 0 or 1 [[6]](#References). While it is easy to implement, it is limited when working with non-linear data. Often, logistic regression can have the tendency to overfit the training data, which becomes amplified when there is an increase in the training data. [ps. 1](#AppendixA)
+The logistic regression model is a classification algorithm when the targeted data is categorical in nature. It is a statistical method for analyzing a dataset when the data has a binary or multinomial output, such as when it belongs to one class or another, or if it is either a 0 or 1 [[6]](#References). While it is easy to implement, it is limited when working with non-linear data. Often, logistic regression can have the tendency to overfit the training data, which becomes amplified when there is an increase in the training data. [[ps. 1]](#AppendixA)
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756051-89b18e73-7ecc-4c7e-bbf8-a8eafb6a3f8a.png" width="200" />
 
@@ -92,7 +92,7 @@ Before creating the models, splitting the dataset into a training set and testin
 
 
 ## Results
-I used the multivariate classification dataset from UCI Machine Learning Repository. [10] It contains 30,000 observations and 24 variables in total where it corresponds to an individual credit card client. The data variables can be divided into two categories: 23 original features as explanatory variables and one response variable where the default individual is indicated as 1 where the otherwise is 0.
+I used the multivariate classification dataset from UCI Machine Learning Repository. [[10]](#References) It contains 30,000 observations and 24 variables in total where it corresponds to an individual credit card client. The data variables can be divided into two categories: 23 original features as explanatory variables and one response variable where the default individual is indicated as 1 where the otherwise is 0.
 
 **Dataset Initial Observations**
 
