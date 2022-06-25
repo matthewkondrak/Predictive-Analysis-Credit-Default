@@ -165,6 +165,7 @@ Performed a series of model development approaches through the following steps:
 | Naive Bayes | 0.40 | 0.25 | 0.85 | 0.38 | 0.66 |
 | K-NN | 0.75 | 0.37 | 0.18 | 0.24 | 0.61 |
 | Logistic Regression | 0.78 | 0.25 | 0 | 0 | 0.64 |
+<p align="center"><sup>Table 1: Baseline Model Results </sup></p>
 
 Based on the table above, the ROC curve and bar chart are plotted to visualize which model has the highest accuracy [fig. 11] . It is important to note that the Logistic Regression baseline method has the highest accuracy but with 0 recall. Knowing that Recall rate is the main metric to focus on, Naive Bayes has the highest performance among all of the baseline models as it obtains 0.85 recall rate. Next is hyperparameter tuning for models to experiment different hyper-parameters and to find the best combination of hyperparameter tuning for each model.
 
@@ -180,10 +181,30 @@ The approach of performing hyperparameter tuning would be using the GridSearchCV
 | Logistic Regression (C = 0.1, penalty = l2) | 0.81 | 0.67 | 0.32 | 0.43 | 0.64 |
 | Naive Bayes | 0.80 | 0.57 | 0.39 | 0.46 | 0.65 |
 | Stochastic Gradient Descent | 0.82 | 0.70 | 0.31 | 0.43 | 0.64 |
+<p align="center"><sup>Table 2: Model Results after Hyperparameter Tuning </sup></p>
 
-While there are some improvements in logistic regression and k-NN, logistic regression’s recall is still not performing as expected with a recall rate of .32. I wanted to know if oversampling and undersampling of training data would help to improve recall rate.
+While there are some improvements in logistic regression and k-NN, logistic regression’s recall is still not performing as expected with a recall rate of 0.32. I wanted to know if oversampling and undersampling of training data would help to improve recall rate.
   
+**Model Estimation after Undersampling and Oversampling**
+  
+Random oversampling and random undersampling are performed based on hyperparameter tuning results. 77.9% of non default clients and 22.1% default clients are randomly sampled:
+  
+|  | Before Random Undersampling | After Random Undersampling | Before Random Oversampling | After Random Oversampling |
+| --- | --- | --- | --- | ---|
+| **Default Rate = 1** | 4645 | 4645 | 4645 | 16355 |
+| **Default Rate = 0** | 16355 | 4645 | 16355 | 16355 | 
+<p align="center"><sup>Table 3: Undersampling / Oversampling dataset </sup></p>
+  
+The overall recall rate are being improved after performing sampling method:
 
+| Oversampling | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| --- | --- | --- | --- | ---| --- |
+| SVM | 0.76 | 0.46 | 0.55 | 0.50 | 0.68 |
+| K-NN | 0.73 | 0.39 | 0.39 | 0.39 | 0.61 |
+| Decision Tree | 0.74 | 0.44 | 0.57 | 0.49 | 0.68 |
+| Logistic Regression | 0.78 | 0.50 | 0.55 | 0.52 | 0.69 |
+| Naive Bayes | 0.75 | 0.44 | 0.57 | 0.50 | 0.68 |
+| Stochastic Gradient Descent | 0.77 | 0.47 | 0.57 | 0.52 | 0.69 |
 
 ## Conclusion
 
