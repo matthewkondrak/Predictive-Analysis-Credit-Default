@@ -58,13 +58,13 @@ The K-Nearest Neighbors algorithm differs from the models in this list, by direc
 
 Before creating the models, splitting the dataset into a training set and testing set must be done. Further, a confusion matrix is built. This confusion matrix consists of the number of correct True Positives (TP), the number of correct predictions marked negative (TN), the number of incorrect predictions that are marked positive (FP), and the number of incorrect negative predictions (FN).
 
-The **Accuracy** determines the ratio of correct predictions over the overall predictions
+* The **Accuracy** determines the ratio of correct predictions over the overall predictions
 
-The **Precision** determines how well the algorithm is able to find true positives.
+* The **Precision** determines how well the algorithm is able to find true positives.
 
-The **Recall** determines how well the classification model can find all of the true positive samples.
+* The **Recall** determines how well the classification model can find all of the true positive samples.
 
-The **F1** measure is the weighted mean between recall and precision. This F1 score helps with model determine how correct the positive predictions are
+* The **F1** measure is the weighted mean between recall and precision. This F1 score helps with model determine how correct the positive predictions are
 
 ## Results
 
