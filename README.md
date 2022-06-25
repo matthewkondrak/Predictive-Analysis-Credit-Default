@@ -4,7 +4,7 @@
 ### TABLE OF CONTENTS
 * [Abstract](#Abstract)
 * [Introduction](#Introduction)
-* [Related Work](#Related-Work)
+* [Related Work](#Related)
 * [Models](#Models)
 * [Results](#Results)
 * [Conclusion](#Conclusion)
@@ -31,7 +31,7 @@ The purpose of this project is to determine the best model that can identify cre
 As such, the optimal outcome of this project will be to apply the chosen final model to reduce the default rate via classifying the credit card clients accurately into default and non-default.
 
 
-## Related-Work
+## Related Work
 According to Husejinovic et al.[[2]](#References), their way of conducting default payment prediction for eight machine learning models (logistic regression, C4.5, SVM, naïve bayes, k-NN, and ensemble learning methods) is to apply outliers and extreme values elimination based on interquartile range and perform feature selection through wrapper method named classifier subset evaluator. Studies from Bai proposed that outliers can be determined through density-based outlier detection techniques [[3]](#References). This is further experimented by Wang et al. where a two-layer ensemble model is being implemented for outlier detection [[4]](#References). In this project, the approach of feature engineering through standard scalar method for data normalization noise removal through interquartile range method might take away some potential useful values as it might just be referring to individuals that possessed more wealth.
 
 Furthermore, data level resampling techniques are being explored to overcome the issues of data imbalance. From there, it can be beneficial to know if different resampling techniques would improve the proposed model performance. Kerdprasop and Kerdprasop [[5]](#References) performed random oversampling and SMOTE method to increase the accuracy of their learning model (regression model, SVM, decision tree, and neural network). Their findings show that SMOTE obtained the highest specificity model while random over sampling model has the highest sensitivity model. I perform the experiments mentioned in related works to arrive at the best estimation for the model to determine if my approach would outperform the findings from the related works and if not, what I should refer to and potentially improve the overall model accuracy from there.
