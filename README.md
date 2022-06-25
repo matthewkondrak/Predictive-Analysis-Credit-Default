@@ -4,7 +4,7 @@
 ### TABLE OF CONTENTS
 * [Abstract](#Abstract)
 * [Introduction](#Introduction)
-* [Related Work](#Related Work)
+* [Related Work](#RelatedWork)
 * [Models](#Models)
 * [Results](#Results)
 * [Conclusion](#Conclusion)
