@@ -29,7 +29,7 @@ As such, the optimal outcome of this project will be to apply the chosen final m
 
 
 ## Related-Work
-According to Husejinovic et al.[2], their way of conducting default payment prediction for eight machine learning models (logistic regression, C4.5, SVM, naïve bayes, k-NN, and ensemble learning methods) is to apply outliers and extreme values elimination based on interquartile range and perform feature selection through wrapper method named classifier subset evaluator. Studies from Bai proposed that outliers can be determined through density-based outlier detection techniques [3]. This is further experimented by Wang et al. where a two-layer ensemble model is being implemented for outlier detection [4]. In this study, the approach of feature engineering through standard scalar method for data normalization noise removal through interquartile range method might take away some potential useful values as it might just be referring to individuals that possessed more wealth.
+According to Husejinovic et al.[2], their way of conducting default payment prediction for eight machine learning models (logistic regression, C4.5, SVM, naïve bayes, k-NN, and ensemble learning methods) is to apply outliers and extreme values elimination based on interquartile range and perform feature selection through wrapper method named classifier subset evaluator. Studies from Bai proposed that outliers can be determined through density-based outlier detection techniques [3]. This is further experimented by Wang et al. where a two-layer ensemble model is being implemented for outlier detection [4]. In this project, the approach of feature engineering through standard scalar method for data normalization noise removal through interquartile range method might take away some potential useful values as it might just be referring to individuals that possessed more wealth.
 
 Furthermore, data level resampling techniques are being explored to overcome the issues of data imbalance. From there, it can be beneficial to know if different resampling techniques would improve the proposed model performance. Kerdprasop and Kerdprasop [5] performed random oversampling and SMOTE method to increase the accuracy of their learning model (regression model, SVM, decision tree, and neural network). Their findings show that SMOTE obtained the highest specificity model while random over sampling model has the highest sensitivity model. I perform the experiments mentioned in related works to arrive at the best estimation for the model to determine if my approach would outperform the findings from the related works and if not, what I should refer to and potentially improve the overall model accuracy from there.
 
@@ -38,21 +38,31 @@ Furthermore, data level resampling techniques are being explored to overcome the
 
 The logistic regression model is a classification algorithm when the targeted data is categorical in nature. It is a statistical method for analyzing a dataset when the data has a binary or multinomial output, such as when it belongs to one class or another, or if it is either a 0 or 1 [6]. While it is easy to implement, it is limited when working with non-linear data. Often, logistic regression can have the tendency to overfit the training data, which becomes amplified when there is an increase in the training data. [ps. 1]
 
-**Support Vector Machines**
+<p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756051-89b18e73-7ecc-4c7e-bbf8-a8eafb6a3f8a.png" width="200" />
+
+**Support Vector Machines (SVM)**
 
 Support Vector Machine is a linear model that creates a hyperplane that directly separates the data into classes. This hyperplane is placed in a N-dimensional space, where N is the number of features. While logistic regression tends to focus more on maximizing the probability of two classes, SVM uses the hyperplane to maximize the separation of classes. Using the hyper-parameter, C, modifies the hyperplane’s margin to classify the training data properly. Increasing the value of C signifies more accurate training points. [7] [ps. 2]
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756087-46745538-f7cf-4ffb-a136-3a729d2db192.png" width="265" />
 
 **Decision Tree**
 
 The decision tree algorithm works by building a classification model that results in a tree-like structure. It follows a principle of maximization of the separation of the data. This maximization starts with the training data on a single node, where it splits into two nodes. This split happens through learning simple decision rules deduced from the training data. This splitting continues until the decision tree achieves a leaf node that contains the predicted class value. To solve the issue of overfitting, the depth of the tree gets assigned a default value. [7] [ps. 3]
 
+<p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756118-576eec5a-61a8-44ba-8c80-36968ab94e94.png" width="205" />
+
 **Naive Bayes**
 
 The Naive-Bayes algorithm is based on the Bayes theorem. This theorem assumes the independence of the predictor variables, which allows the algorithm to calculate the value of an attribute without affecting the others. [8] It works by using characteristics and cases with large likelihood to calculate the probability of classification. [ps. 4]
 
+<p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756129-9f2d669c-4f60-4013-92f6-dc359fc665b1.png" width="225" />
+
 **K-Nearest Neighbors (KNN)**
 
 The K-Nearest Neighbors algorithm differs from the models in this list, by directly using the data for classification. It stores all the available data and classifies the new data based on the similarity amount, with data points classified based on how its neighbors are classified. The algorithm omits building a model first which provides the benefit of not requiring additional model construction; with k being the only adjustable parameter. [9] The k represents the number of nearest neighbors to be included in the model. Therefore, through the value adjustment of k, the model can be made more or less flexible. [ps. 5]
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756136-eeab8b14-cb0f-47c0-be4a-825024204236.png" width="425" />
 
 **Performance Measures**
 
@@ -60,11 +70,21 @@ Before creating the models, splitting the dataset into a training set and testin
 
 * The **Accuracy** determines the ratio of correct predictions over the overall predictions
 
+<p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756145-2865e860-3dbd-4a4a-93bc-e010a07ea271.png" width="250" />
+
 * The **Precision** determines how well the algorithm is able to find true positives.
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756156-303422af-6bf6-4400-b395-dda044fe0576.png" width="150" />
 
 * The **Recall** determines how well the classification model can find all of the true positive samples.
 
+<p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756165-21655773-6372-4172-a477-22aa1b6a043b.png" width="125" />
+
 * The **F1** measure is the weighted mean between recall and precision. This F1 score helps with model determine how correct the positive predictions are
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756169-d9b0c623-15ef-4a92-977b-5dee0a8de85d.png" width="180" />
+
+
 
 ## Results
 I used the multivariate classification dataset from UCI Machine Learning Repository. [10] It contains 30,000 observations and 24 variables in total where it corresponds to an individual credit card client. The data variables can be divided into two categories: 23 original features as explanatory variables and one response variable where the default individual is indicated as 1 where the otherwise is 0.
@@ -85,12 +105,12 @@ The original data types are all labeled as ‘Object’ and therefore data types
 
 **EDA (Univariate & Multivariate Analysis)**
 
-*Univariate Analysis
+*Univariate Analysis*
 
 * Considering ‘SEX’, ‘EUDCATION’, ‘MARRIAGE’, ‘PAY_1 through PAY_6’, ‘default_payment_result’ as categorical variables, a bar chart was created by categorizing them as a subset of the dataset to separate them with the continuous numeric variables E.g., noted that out of 30000 credit cards, 23364 were default credit cards which is 77.9% [fig. 4]
 * Create sns.histplot and density plot for the rest of numeric variables [fig. 5]
 
-*Multivariate Analysis
+*Multivariate Analysis*
 
 * Performed multivariate analysis in relation to the target variable y = ‘default_payment_result’ via visualization of bar charts, scatter plots, and box plots to investigate the relationships against numerical and categorical features [fig. 6]
 
