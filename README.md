@@ -5,7 +5,7 @@
 * [Abstract](#Abstract)
 * [Introduction](#Introduction)
 * [Related Work](#Related-Work)
-* [Model](#Model)
+* [Models](#Models)
 * [Results](#Results)
 * [Conclusion](#Conclusion)
 
@@ -33,7 +33,7 @@ According to Husejinovic et al.[2], their way of conducting default payment pred
 
 Furthermore, data level resampling techniques are being explored to overcome the issues of data imbalance. From there, it can be beneficial to know if different resampling techniques would improve the proposed model performance. Kerdprasop and Kerdprasop [5] performed random oversampling and SMOTE method to increase the accuracy of their learning model (regression model, SVM, decision tree, and neural network). Their findings show that SMOTE obtained the highest specificity model while random over sampling model has the highest sensitivity model. I perform the experiments mentioned in related works to arrive at the best estimation for the model to determine if my approach would outperform the findings from the related works and if not, what I should refer to and potentially improve the overall model accuracy from there.
 
-## Model
+## Models
 **Logistic Regression**
 
 The logistic regression model is a classification algorithm when the targeted data is categorical in nature. It is a statistical method for analyzing a dataset when the data has a binary or multinomial output, such as when it belongs to one class or another, or if it is either a 0 or 1 [6]. While it is easy to implement, it is limited when working with non-linear data. Often, logistic regression can have the tendency to overfit the training data, which becomes amplified when there is an increase in the training data. [ps. 1]
@@ -132,6 +132,32 @@ In this project, baseline models were performed to establish a foundation of the
 
 Therefore, in addition to the mean baseline model; Decision Tree, Naïve Bayes, KNearest Neighbors, and Logistic Regression baseline models were performed as a point of reference to compare to the tuned models.
 
+**Feature Engineering**
+
+To improve the baseline models, feature engineering is performed through the following methods:
+
+* Multicollinearity Analysis: features with correlation coefficient >= 0.92 will be removed [fig. 7 and 8]
+
+* Standard Scalar: perform standardization to transform their values with mean value of 0 and variance of 1 [fig. 9]
+
+* One-Hot Encoding: Other than dropping ‘ID’, one-hot-encoding to categorical data is being conducted to multiple categorical columns and assigned them 0 or 1. The encoded variable allows the categorical data ‘SEX’, ‘EDUCATION’, and, ‘MARRIAGE’ [fig. 10]
+
+**Model Estimation** 
+
+Performed a series of model development approaches through the following steps:
+
+1. Perform baseline models mentioned in the previous section (mean baseline model, Logistic Regression, Decision Tree, Naive Bayes, k-NN)
+
+2. Perform GridSearch CV and hyperparameter tuning to improve recall rate and overall accuracy
+
+3. Implement Stochastic Gradient Descent
+
+4. Improve tuned models through oversampling and undersampling training data
+
+5. Review model result through performance metrics in specifically to ROC and PR curve
+
+6. Propose the best performance model for credit card default rate classification
+  
 
 
 ## Conclusion
