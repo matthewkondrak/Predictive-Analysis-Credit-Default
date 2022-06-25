@@ -205,6 +205,7 @@ The overall recall rate are being improved after performing sampling method:
 | Logistic Regression | 0.78 | 0.50 | 0.55 | 0.52 | 0.69 |
 | Naive Bayes | 0.75 | 0.44 | 0.57 | 0.50 | 0.68 |
 | Stochastic Gradient Descent | 0.77 | 0.47 | 0.57 | 0.52 | 0.69 |
+<p align="center"><sup>Table 4: Model Results after Random Oversampling Method </sup></p>
 
 ## Conclusion
 
