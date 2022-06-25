@@ -235,7 +235,7 @@ As part of a future research, I would like to continue performing different meth
 
 
 ## References
-(1) Board of governors of the Federal Reserve System. The Fed - Consumer Credit - G.19. (n.d.). [cited October 29, 2021], from https://www.federalreserve.gov/releases/g19/current/.
+[1] Board of governors of the Federal Reserve System. The Fed - Consumer Credit - G.19. (n.d.). [cited October 29, 2021], from https://www.federalreserve.gov/releases/g19/current/.
 
 [2] A. Husejinovic, D. Kečo, and Z. Mašetić. Application of Machine Learning Algorithms in Credit Card Default Payment Prediction. International Journal of Scientific Research. 7. 425.10.15373/22778179#husejinovic, 2018.
 
