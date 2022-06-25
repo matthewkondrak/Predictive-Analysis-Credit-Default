@@ -157,8 +157,20 @@ Performed a series of model development approaches through the following steps:
 5. Review model result through performance metrics in specifically to ROC and PR curve
 
 6. Propose the best performance model for credit card default rate classification
-  
 
+
+| Baseline Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| --- | --- | --- | --- | ---| --- |
+| Decision Tree | 0.72 | 0.38 | 0.40 | 0.39 | 0.61 |
+| Naive Bayes | 0.40 | 0.25 | 0.85 | 0.38 | 0.66 |
+| K-NN | 0.75 | 0.37 | 0.18 | 0.24 | 0.61 |
+| Logistic Regression | 0.78 | 0.25 | 0 | 0 | 0.64 |
+
+Based on the table above, the ROC curve and bar chart are plotted to visualize which model has the highest accuracy [fig. 11] . It is important to note that the Logistic Regression baseline method has the highest accuracy but with 0 recall. Knowing that Recall rate is the main metric to focus on, Naive Bayes has the highest performance among all of the baseline models as it obtains 0.85 recall rate. Next is hyperparameter tuning for models to experiment different hyper-parameters and to find the best combination of hyperparameter tuning for each model.
+
+**Model Estimation after Hyperparameter Tuning**
+  
+The approach of performing hyperparameter tuning would be using the GridSearchCV package where the best parameters are selected to tune the respective models after setting a range of parameters. Then plotting ROC [fig. 12] and PR curve [fig. 13] based on the performance result.
 
 ## Conclusion
 
