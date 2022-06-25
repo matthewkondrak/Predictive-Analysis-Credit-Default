@@ -207,7 +207,23 @@ The overall recall rate are being improved after performing sampling method:
 | Stochastic Gradient Descent | 0.77 | 0.47 | 0.57 | 0.52 | 0.69 |
 <p align="center"><sup>Table 4: Model Results after Random Oversampling Method </sup></p>
 
+Through a random oversampling method, Stochastic Gradient Descent performs the best in terms of recall value 0.57, followed by Decision Tree and Naive Bayes.
+
+| Undersampling | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| --- | --- | --- | --- | ---| --- |
+| SVM | 0.75 | 0.45 | 0.60 | 0.51 | 0.70 |
+| K-NN | 0.75 | 0.44 | 0.57 | 0.50 | 0.68 |
+| Decision Tree | 0.77 | 0.48 | 0.55 | 0.51 | 0.69 |
+| Logistic Regression | 0.78 | 0.49 | 0.55 | 0.52 | 0.69 |
+| Naive Bayes | 0.75 | 0.44 | 0.57 | 0.50 | 0.68 |
+| Stochastic Gradient Descent | 0.78 | 0.50 | 0.54 | 0.52 | 0.69 |
+<p align="center"><sup>Table 5: Model Results after Random Undersampling Method </sup></p>
+
+Similar results were shown after performing a random undersampling method for all models. However, SVM and K-NN showed the best improvement in recall value with this method. Here SVM performs the best in terms of recall value 0.60, followed by Logistic Regression and K-NN.
+
 ## Conclusion
+
+
 
 ## References
 [1] Board of governors of the Federal Reserve System. The Fed - Consumer Credit - G.19. (n.d.). [cited October 29, 2021], from https://www.federalreserve.gov/releases/g19/current/.
