@@ -8,6 +8,8 @@
 * [Models](#Models)
 * [Results](#Results)
 * [Conclusion](#Conclusion)
+* [Appendix A](#AppendixA)
+* [Appendix B](#AppendixB)
 
 ## Abstract
 In this project, 5 machine learning methods were performed to identify delinquency rates of credit card clients. Through the comparison of classification machine learning methods, the aim is to study the best method with the consideration of demographic features and financial aspects for each client. From the perspective of mitigating potential loss to financial institutions, model assessments were performed through performance metrics; in particular, focusing on recall, f1-score and accuracy of each model.
@@ -195,6 +197,8 @@ Random oversampling and random undersampling are performed based on hyperparamet
 | **Default Rate = 0** | 16355 | 4645 | 16355 | 16355 | 
 <p align="center"><sup>Table 3: Undersampling / Oversampling dataset </sup></p>
   
+**Oversampling**
+
 The overall recall rate are being improved after performing sampling method:
 
 | Oversampling | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
@@ -209,6 +213,7 @@ The overall recall rate are being improved after performing sampling method:
 
 Through a random oversampling method, Stochastic Gradient Descent performs the best in terms of recall value 0.57, followed by Decision Tree and Naive Bayes.
 
+**Undersampling**
 | Undersampling | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 | --- | --- | --- | --- | ---| --- |
 | SVM | 0.75 | 0.45 | 0.60 | 0.51 | 0.70 |
@@ -219,11 +224,37 @@ Through a random oversampling method, Stochastic Gradient Descent performs the b
 | Stochastic Gradient Descent | 0.78 | 0.50 | 0.54 | 0.52 | 0.69 |
 <p align="center"><sup>Table 5: Model Results after Random Undersampling Method </sup></p>
 
-Similar results were shown after performing a random undersampling method for all models. However, SVM and K-NN showed the best improvement in recall value with this method. Here SVM performs the best in terms of recall value 0.60, followed by Logistic Regression and K-NN.
+Similar results were shown after performing a random undersampling method for all models. However, SVM and K-NN showed the best improvement in recall value with this method. Here SVM performs the best in terms of recall value 0.60, followed by Naive Bayes and K-NN.
 
 ## Conclusion
 
+A structural model development approach was performed to model the delinquency rates of credit card problems to determine clients that would most likely go into default. Through a simple method of dummy classification, hyperparameter tuning improved the overall model performance, especially in accuracy rate. However, the overall recall rate for all models after hyperparameter tuning are not performing well with the average of 0.34. To determine if the overall recall rate can be improved further, undersampling and oversampling was performed on training data and the recall rate has been improved to an average of 0.55. In addition, I found that the best default rate predictors from this dataset are "amount paid in previous months", "amount of given credit", and "repayment status in previous months".
+
+As part of a future research, I would like to continue performing different methods to increase recall of our models through PCA, further algorithm tuning or perform different methods of oversampling and undersampling e.g. SMOTE, Cluster Centroid. Also, a potential idea is to look into setting specific objective functions to redirect the project to fit the macroeconomic circumstances instead of relying fully on this dataset. For example, financial institutions might have more risk appetite and may be more inclined to minimize false negatives and less geared towards minimizing false positives. Hence, by setting a specific cost function, it would be more practical to reflect the current macroeconomic situation.
 
 
 ## References
 [1] Board of governors of the Federal Reserve System. The Fed - Consumer Credit - G.19. (n.d.). [cited October 29, 2021], from https://www.federalreserve.gov/releases/g19/current/.
+
+[2] A. Husejinovic, D. Kečo, and Z. Mašetić. Application of Machine Learning Algorithms in Credit Card Default Payment Prediction. International Journal of Scientific Research. 7. 425.10.15373/22778179#husejinovic, 2018.
+
+[3] M. Bai, X. Wang, J. Xin, and G. Wang, An efficient algorithm for distributed density-based outlier detection on big data, Neurocomputing, pg. 19-28 ISSN 0925-2312, doi:10.1016/j.neucom.2015.05.135., 2016.
+
+[4] S. Wei, D. Yang, W. Zhang and S. Zhang, A Novel Noise-Adapted Two-Layer Ensemble Model for Credit Scoring Based on Backflow Learning, in IEEE Access, vol. 7, pp. 99217-99230, doi:10.1109/ACCESS.2019.2930332., 2019.
+
+[5] N. Kerdprasop and K. Kerdprasop, On the Generation of Accurate Predictive Model from Highly Imbalanced Data with Heuristics and replication Technologies, International Journal of Bio-Science and Bio-Technology, vol. 4, pg. 49- 64, 2012.
+
+[6] A. Worster, J. Fan, and A. Ismaila. Understanding Linear and Logistic Regression Analyses. CJEM. pg. 112–3. 2007.
+
+[7] K.S. Naik. Predicting Credit Risk for Unsecured Lending: A Machine Learning Approach. NMIMS MPSTME, pg. 5. 2021.
+
+[8] Ajay, A. Venkatesh, and S.G. Jacob. Prediction of Credit-Card Defaulters: A Comparative Study on Performance of Classifiers. International Journal of Computer Applications (0975-8887), vol. 145, pg 38. 2016.
+
+[9] B.V. Dasarathy. Nearest Neighbor Pattern Classification Techniques. Computer Society Press, 1990.
+
+[10] I. Yeh and C. Lien, The Comparisons of Data Mining Techniques for the Predictive Accuracy of Probability of Default of Credit Card Clients, Expert Systems with Applications, vol. 36, no. 2, pp. 2473-2480, 2009. Appen
+
+
+## AppendixA
+
+## AppendixB
