@@ -171,6 +171,19 @@ Based on the table above, the ROC curve and bar chart are plotted to visualize w
 **Model Estimation after Hyperparameter Tuning**
   
 The approach of performing hyperparameter tuning would be using the GridSearchCV package where the best parameters are selected to tune the respective models after setting a range of parameters. Then plotting ROC [fig. 12] and PR curve [fig. 13] based on the performance result.
+  
+| Grid Search | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| --- | --- | --- | --- | ---| --- |
+| SVM (C = 1, kernel = rbf) | 0.82 | 0.66 | 0.35 | 0.46 | 0.65 |
+| K-NN (leaf size = 1, k = 14, weights = uniform) | 0.81 | 0.65 | 0.31 | 0.42 | 0.63 |
+| Decision Tree (max depth = 4, min sample leaf = 6, min sample split = 2) | 0.82 | 0.66 | 0.36 | 0.46 | 0.65 |
+| Logistic Regression (C = 0.1, penalty = l2) | 0.81 | 0.67 | 0.32 | 0.43 | 0.64 |
+| Naive Bayes | 0.80 | 0.57 | 0.39 | 0.46 | 0.65 |
+| Stochastic Gradient Descent | 0.82 | 0.70 | 0.31 | 0.43 | 0.64 |
+
+While there are some improvements in logistic regression and k-NN, logistic regression’s recall is still not performing as expected with a recall rate of .32. I wanted to know if oversampling and undersampling of training data would help to improve recall rate.
+  
+
 
 ## Conclusion
 
