@@ -45,27 +45,25 @@ The logistic regression model is a classification algorithm when the targeted da
 
 **Support Vector Machines (SVM)**
 
-Support Vector Machine is a linear model that creates a hyperplane that directly separates the data into classes. This hyperplane is placed in a N-dimensional space, where N is the number of features. While logistic regression tends to focus more on maximizing the probability of two classes, SVM uses the hyperplane to maximize the separation of classes. Using the hyper-parameter, C, modifies the hyperplane’s margin to classify the training data properly. Increasing the value of C signifies more accurate training points [7]
-  
-  [ps. 2]
+Support Vector Machine is a linear model that creates a hyperplane that directly separates the data into classes. This hyperplane is placed in a N-dimensional space, where N is the number of features. While logistic regression tends to focus more on maximizing the probability of two classes, SVM uses the hyperplane to maximize the separation of classes. Using the hyper-parameter, C, modifies the hyperplane’s margin to classify the training data properly. Increasing the value of C signifies more accurate training points [[7]](#References) [[ps. 2]](#AppendixA)
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756087-46745538-f7cf-4ffb-a136-3a729d2db192.png" width="265" />
 
 **Decision Tree**
 
-The decision tree algorithm works by building a classification model that results in a tree-like structure. It follows a principle of maximization of the separation of the data. This maximization starts with the training data on a single node, where it splits into two nodes. This split happens through learning simple decision rules deduced from the training data. This splitting continues until the decision tree achieves a leaf node that contains the predicted class value. To solve the issue of overfitting, the depth of the tree gets assigned a default value. [7] [ps. 3]
+The decision tree algorithm works by building a classification model that results in a tree-like structure. It follows a principle of maximization of the separation of the data. This maximization starts with the training data on a single node, where it splits into two nodes. This split happens through learning simple decision rules deduced from the training data. This splitting continues until the decision tree achieves a leaf node that contains the predicted class value. To solve the issue of overfitting, the depth of the tree gets assigned a default value. [[7]](#References) [[ps. 3]](#AppendixA)
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756118-576eec5a-61a8-44ba-8c80-36968ab94e94.png" width="205" />
 
 **Naive Bayes**
 
-The Naive-Bayes algorithm is based on the Bayes theorem. This theorem assumes the independence of the predictor variables, which allows the algorithm to calculate the value of an attribute without affecting the others. [8] It works by using characteristics and cases with large likelihood to calculate the probability of classification. [ps. 4]
+The Naive-Bayes algorithm is based on the Bayes theorem. This theorem assumes the independence of the predictor variables, which allows the algorithm to calculate the value of an attribute without affecting the others. [[8]](#References) It works by using characteristics and cases with large likelihood to calculate the probability of classification. [[ps. 4]](#AppendixA)
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756129-9f2d669c-4f60-4013-92f6-dc359fc665b1.png" width="225" />
 
 **K-Nearest Neighbors (KNN)**
 
-The K-Nearest Neighbors algorithm differs from the models in this list, by directly using the data for classification. It stores all the available data and classifies the new data based on the similarity amount, with data points classified based on how its neighbors are classified. The algorithm omits building a model first which provides the benefit of not requiring additional model construction; with k being the only adjustable parameter. [9] The k represents the number of nearest neighbors to be included in the model. Therefore, through the value adjustment of k, the model can be made more or less flexible. [ps. 5]
+The K-Nearest Neighbors algorithm differs from the models in this list, by directly using the data for classification. It stores all the available data and classifies the new data based on the similarity amount, with data points classified based on how its neighbors are classified. The algorithm omits building a model first which provides the benefit of not requiring additional model construction; with k being the only adjustable parameter. [[9]](#References) The k represents the number of nearest neighbors to be included in the model. Therefore, through the value adjustment of k, the model can be made more or less flexible. [[ps. 5]](#AppendixA)
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756136-eeab8b14-cb0f-47c0-be4a-825024204236.png" width="425" />
 
