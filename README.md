@@ -10,7 +10,7 @@
 * [Conclusion](#Conclusion)
 
 ## Abstract
-In this study, 5 machine learning methods were performed to identify delinquency rates of credit card clients. Through the comparison of classification machine learning methods, the aim is to study the best method with the consideration of demographic features and financial aspects for each client. From the perspective of mitigating potential loss to financial institutions, model assessments were performed through performance metrics; in particular, focusing on recall, f1-score and accuracy of each model.
+In this project, 5 machine learning methods were performed to identify delinquency rates of credit card clients. Through the comparison of classification machine learning methods, the aim is to study the best method with the consideration of demographic features and financial aspects for each client. From the perspective of mitigating potential loss to financial institutions, model assessments were performed through performance metrics; in particular, focusing on recall, f1-score and accuracy of each model.
 
 ## Introduction
 The delinquency rates of credit cards measured by the Federal Reserve Bank of New York have consistently experienced the highest credit card delinquencies over many years before the financial crisis. According to the Federal Reserve System, the credit card delinquencies over time are to be seen as encouraging and saw the largest decrease during the pandemic, going from 9.2% in the first quarter of 2020 down to 5.7% before 2021 due to the travel and entertainment restrictions [1]. While this seems to be a positive sign where credit card delinquencies remained well below the levels in comparison to early 2000, it would be seen as a temporary result of displaced discretionary expenses due to the COVID-19 restrictions. In addition, the possibility of using credit cards as an extension of their income would still be a social issue that lives beyond one’s means.
@@ -67,6 +67,51 @@ Before creating the models, splitting the dataset into a training set and testin
 * The **F1** measure is the weighted mean between recall and precision. This F1 score helps with model determine how correct the positive predictions are
 
 ## Results
+I used the multivariate classification dataset from UCI Machine Learning Repository. [10] It contains 30,000 observations and 24 variables in total where it corresponds to an individual credit card client. The data variables can be divided into two categories: 23 original features as explanatory variables and one response variable where the default individual is indicated as 1 where the otherwise is 0.
+
+**Dataset Initial Observations**
+
+The original data types are all labeled as ‘Object’ and therefore data types for all numerical data variables are updated to the respective ‘int64’ and ‘float64’ for later EDA and machine learning purposes. There are no null values in this dataset, and it is important to find out if the attributes of all variables are valid. This would be addressed in the univariate analysis.
+
+**Pre-processing Data**
+
+* Renaming column ‘Pay_0’ to ‘Pay_1’ for consistency with the rest of the columns; ‘default payment next month’ to ‘default_payment_result’ for easier referencing [fig.1]
+
+* Drop ‘ID’ column as it is not part of the modeling process [fig.1]
+
+* Label categorical data ‘SEX’, ‘EDUCATION’, ‘MARRIAGE’ as categorical label for easier reference [fig. 2]
+
+* Clean ‘EDUCATION’, ‘MARRIAGE’ i.e. group low counts categories in respective columns as ‘others’ to make sure it will not impact regression accuracy [fig. 3]
+
+**EDA (Univariate & Multivariate Analysis)**
+
+*Univariate Analysis
+
+* Considering ‘SEX’, ‘EUDCATION’, ‘MARRIAGE’, ‘PAY_1 through PAY_6’, ‘default_payment_result’ as categorical variables, a bar chart was created by categorizing them as a subset of the dataset to separate them with the continuous numeric variables E.g., noted that out of 30000 credit cards, 23364 were default credit cards which is 77.9% [fig. 4]
+* Create sns.histplot and density plot for the rest of numeric variables [fig. 5]
+
+*Multivariate Analysis
+
+* Performed multivariate analysis in relation to the target variable y = ‘default_payment_result’ via visualization of bar charts, scatter plots, and box plots to investigate the relationships against numerical and categorical features [fig. 6]
+
+* Hypothesis tests are performed to determine if there is a relationship between default rate and categorical variables in specifically to Sex, Marital Status, Education Level H0: There is no relationship between categorical variables and default rate H1: There is a relationship between categorical variables and default rate
+
+Noting that all three variables are statistically different from the default rate, we reject the null hypothesis for categorical variables and therefore they are included in the later model estimation.
+
+**Split Data: Training and Testing Set**
+
+The original cleaned dataset is divided into variable X and target variable Y into 70-30 training and testing sets for the baseline model and perform another set of training and testing data with standardized features. The purpose of standardization is to rescale the features where the mean and standard deviation would be 0 and 1 respectively. The result has been improved significantly after feature scaling as it helped to standardize the range of features where it affected the result heavily in computing the distance.
+
+**Metric Selection**
+
+Performed five metrics in this project - accuracy, precision, recall, F1-Score, and ROC to determine the performance of each machine learning model. It is important to focus more on the recall and accuracy as recall is the ability of the classifier to find positive class. This aligns to the project’s objective, where the cost associated with false negatives and hence recall is the important metric for the project to detect default clients (default rate =1).
+
+**Baseline**
+
+In this project, baseline models were performed to establish a foundation of the data. The main model was a simple mean baseline model, which took the mean of all the data and calculated the accuracy of predicting non-default. The mean baseline model was put under consideration however; the recall value is the main importance for the project to compare and improve on.
+
+Therefore, in addition to the mean baseline model; Decision Tree, Naïve Bayes, KNearest Neighbors, and Logistic Regression baseline models were performed as a point of reference to compare to the tuned models.
+
 
 
 ## Conclusion
