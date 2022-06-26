@@ -259,7 +259,7 @@ As part of a future research, I would like to continue performing different meth
 
 [Fig. 1]: Renaming the column PAY_0 to PAY_1 and default payment next month to default_payment_result
 
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797659-a756cd3e-6c61-4de5-a3cb-fff0cad095fd.png" width="550" />
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797659-a756cd3e-6c61-4de5-a3cb-fff0cad095fd.png" width="600" />
  
   
 [Fig. 2]: ‘SEX, EDUCATION, MARRIAGE, PAY_1 through to PAY_6’ are all categorized with the default_payment_result dividing them into rate of defaults and non-defaults
@@ -310,7 +310,7 @@ As part of a future research, I would like to continue performing different meth
 
 [Fig. 11]: A comparison of all of the baseline models and the ROC curve.
  
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797779-e23455cc-0c8d-4771-ab50-a2c0a0cbd27a.png" width="500" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797779-e23455cc-0c8d-4771-ab50-a2c0a0cbd27a.png" width="550" />    
 
 
 [Fig. 12]: ROC curve after performing Hyperparameter Tuning.
