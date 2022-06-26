@@ -97,24 +97,24 @@ The original data types are all labeled as ‘Object’ and therefore data types
 
 **Pre-processing Data**
 
-* Renaming column ‘Pay_0’ to ‘Pay_1’ for consistency with the rest of the columns; ‘default payment next month’ to ‘default_payment_result’ for easier referencing [fig. 1](#AppendixA)
+* Renaming column ‘Pay_0’ to ‘Pay_1’ for consistency with the rest of the columns; ‘default payment next month’ to ‘default_payment_result’ for easier referencing [[fig. 1]](#AppendixA)
 
-* Drop ‘ID’ column as it is not part of the modeling process [fig. 1](#AppendixA)
+* Drop ‘ID’ column as it is not part of the modeling process [[fig. 1]](#AppendixA)
 
-* Label categorical data ‘SEX’, ‘EDUCATION’, ‘MARRIAGE’ as categorical label for easier reference [fig. 2](#AppendixA)
+* Label categorical data ‘SEX’, ‘EDUCATION’, ‘MARRIAGE’ as categorical label for easier reference [[fig. 2]](#AppendixA)
 
-* Clean ‘EDUCATION’, ‘MARRIAGE’ i.e. group low counts categories in respective columns as ‘others’ to make sure it will not impact regression accuracy [fig. 3](#AppendixA)
+* Clean ‘EDUCATION’, ‘MARRIAGE’ i.e. group low counts categories in respective columns as ‘others’ to make sure it will not impact regression accuracy [[fig. 3]](#AppendixA)
 
 **EDA (Univariate & Multivariate Analysis)**
 
 *Univariate Analysis*
 
-* Considering ‘SEX’, ‘EUDCATION’, ‘MARRIAGE’, ‘PAY_1 through PAY_6’, ‘default_payment_result’ as categorical variables, a bar chart was created by categorizing them as a subset of the dataset to separate them with the continuous numeric variables E.g., noted that out of 30000 credit cards, 23364 were default credit cards which is 77.9% [fig. 4](#AppendixA)
-* Create sns.histplot and density plot for the rest of numeric variables [fig. 5](#AppendixA)
+* Considering ‘SEX’, ‘EUDCATION’, ‘MARRIAGE’, ‘PAY_1 through PAY_6’, ‘default_payment_result’ as categorical variables, a bar chart was created by categorizing them as a subset of the dataset to separate them with the continuous numeric variables E.g., noted that out of 30000 credit cards, 23364 were default credit cards which is 77.9% [[fig. 4]](#AppendixA)
+* Create sns.histplot and density plot for the rest of numeric variables [[fig. 5]](#AppendixA)
 
 *Multivariate Analysis*
 
-* Performed multivariate analysis in relation to the target variable y = ‘default_payment_result’ via visualization of bar charts, scatter plots, and box plots to investigate the relationships against numerical and categorical features [fig. 6](#AppendixA)
+* Performed multivariate analysis in relation to the target variable y = ‘default_payment_result’ via visualization of bar charts, scatter plots, and box plots to investigate the relationships against numerical and categorical features [[fig. 6]](#AppendixA)
 
 * Hypothesis tests are performed to determine if there is a relationship between default rate and categorical variables in specifically to Sex, Marital Status, Education Level H0: There is no relationship between categorical variables and default rate H1: There is a relationship between categorical variables and default rate
 
@@ -138,11 +138,11 @@ Therefore, in addition to the mean baseline model; Decision Tree, Naïve Bayes, 
 
 To improve the baseline models, feature engineering is performed through the following methods:
 
-* Multicollinearity Analysis: features with correlation coefficient >= 0.92 will be removed [fig. 7 and 8](#AppendixA)
+* Multicollinearity Analysis: features with correlation coefficient >= 0.92 will be removed [[fig. 7 & 8]](#AppendixA)
 
-* Standard Scalar: perform standardization to transform their values with mean value of 0 and variance of 1 [fig. 9](#AppendixA)
+* Standard Scalar: perform standardization to transform their values with mean value of 0 and variance of 1 [[fig. 9]](#AppendixA)
 
-* One-Hot Encoding: Other than dropping ‘ID’, one-hot-encoding to categorical data is being conducted to multiple categorical columns and assigned them 0 or 1. The encoded variable allows the categorical data ‘SEX’, ‘EDUCATION’, and, ‘MARRIAGE’ [fig. 10](#AppendixA)
+* One-Hot Encoding: Other than dropping ‘ID’, one-hot-encoding to categorical data is being conducted to multiple categorical columns and assigned them 0 or 1. The encoded variable allows the categorical data ‘SEX’, ‘EDUCATION’, and, ‘MARRIAGE’ [[fig. 10]](#AppendixA)
 
 **Model Estimation** 
 
@@ -169,11 +169,11 @@ Performed a series of model development approaches through the following steps:
 | Logistic Regression | 0.78 | 0.25 | 0 | 0 | 0.64 |
 <p align="center"><sup>Table 1: Baseline Model Results </sup></p>
 
-Based on the table above, the ROC curve and bar chart are plotted to visualize which model has the highest accuracy [fig. 11](#AppendixA). It is important to note that the Logistic Regression baseline method has the highest accuracy but with 0 recall. Knowing that Recall rate is the main metric to focus on, Naive Bayes has the highest performance among all of the baseline models as it obtains 0.85 recall rate. Next is hyperparameter tuning for models to experiment different hyper-parameters and to find the best combination of hyperparameter tuning for each model.
+Based on the table above, the ROC curve and bar chart are plotted to visualize which model has the highest accuracy [[fig. 11]](#AppendixA). It is important to note that the Logistic Regression baseline method has the highest accuracy but with 0 recall. Knowing that Recall rate is the main metric to focus on, Naive Bayes has the highest performance among all of the baseline models as it obtains 0.85 recall rate. Next is hyperparameter tuning for models to experiment different hyper-parameters and to find the best combination of hyperparameter tuning for each model.
 
 **Model Estimation after Hyperparameter Tuning**
   
-The approach of performing hyperparameter tuning would be using the GridSearchCV package where the best parameters are selected to tune the respective models after setting a range of parameters. Then plotting ROC [fig. 12](#AppendixA) and PR curve [fig. 13](#AppendixA) based on the performance result.
+The approach of performing hyperparameter tuning would be using the GridSearchCV package where the best parameters are selected to tune the respective models after setting a range of parameters. Then plotting ROC [[fig. 12]](#AppendixA) and PR curve [[fig. 13]](#AppendixA) based on the performance result.
   
 | Grid Search | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 | --- | --- | --- | --- | ---| --- |
@@ -259,17 +259,17 @@ As part of a future research, I would like to continue performing different meth
 
 [Fig. 1]: Renaming the column PAY_0 to PAY_1 and default payment next month to default_payment_result
 
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797659-a756cd3e-6c61-4de5-a3cb-fff0cad095fd.png" width="300" />
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797659-a756cd3e-6c61-4de5-a3cb-fff0cad095fd.png" width="550" />
  
   
 [Fig. 2]: ‘SEX, EDUCATION, MARRIAGE, PAY_1 through to PAY_6’ are all categorized with the default_payment_result dividing them into rate of defaults and non-defaults
   
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797676-cd968865-b387-43ab-8cf0-9788584f3951.png" width="300" />
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797676-cd968865-b387-43ab-8cf0-9788584f3951.png" width="400" />
 
 
 [Fig. 3]: The Variables ‘MARRIAGE’ and ‘EDUCATION’ and their impact on the default_payment_result. Observing the rate of default proportions.
   
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797688-9b24316a-3325-4d39-aae8-af1a5ba38de7.png" width="300" />
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797688-9b24316a-3325-4d39-aae8-af1a5ba38de7.png" width="550" />
 
   
 [Fig. 4:] The number and percentage of default credit clients against the non-default.
@@ -279,48 +279,48 @@ As part of a future research, I would like to continue performing different meth
   
 [Fig. 5]: A density plot showcasing how the credit card limit has an impact on the default rate.
 
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797716-e9a7af4e-da36-4ed4-88b0-f0470b4d3e8a.png" width="300" />  
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797716-e9a7af4e-da36-4ed4-88b0-f0470b4d3e8a.png" width="550" />  
 
   
 [Fig. 6]: A graph representing the impact of age on the default rate.
 
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797725-c12e749f-7fed-47bc-9f7c-0c8e47f7561c.png" width="300" />  
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797725-c12e749f-7fed-47bc-9f7c-0c8e47f7561c.png" width="450" />  
   
   
 [Fig. 7]: A multicollinearity heat map representing the correlation between various variables.
   
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797735-7f27295c-93c4-4597-906a-75acb2e5bfca.png" width="300" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797735-7f27295c-93c4-4597-906a-75acb2e5bfca.png" width="400" />    
 
   
 [Fig. 8]: A visual representation of the correlation of each attribute with the default_payment_result.
 
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797744-9f5d6408-0b75-46aa-9634-f698bb118132.png" width="300" />    
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797752-f15180e3-1c03-4d3e-9c86-7f65d114f550.png" width="300" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797744-9f5d6408-0b75-46aa-9634-f698bb118132.png" width="450" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797752-f15180e3-1c03-4d3e-9c86-7f65d114f550.png" width="450" />    
 
   
 [Fig. 9]: A box plot representing the default rate distribution.
   
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797763-5dc2c3ea-fa40-44d2-9f60-3711e5bdf694.png" width="300" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797763-5dc2c3ea-fa40-44d2-9f60-3711e5bdf694.png" width="450" />    
 
 
 [Fig. 10]: The data frame of the categorical variables.
 
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797770-dc38ae35-1c0f-4177-98fd-88680560042e.png" width="300" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797770-dc38ae35-1c0f-4177-98fd-88680560042e.png" width="450" />    
 
 
 [Fig. 11]: A comparison of all of the baseline models and the ROC curve.
  
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797779-e23455cc-0c8d-4771-ab50-a2c0a0cbd27a.png" width="300" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797779-e23455cc-0c8d-4771-ab50-a2c0a0cbd27a.png" width="500" />    
 
 
 [Fig. 12]: ROC curve after performing Hyperparameter Tuning.
  
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797892-7fbe2e43-ea77-4b88-b107-145007fcd3bb.png" width="300" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797892-7fbe2e43-ea77-4b88-b107-145007fcd3bb.png" width="400" />    
 
 
 [Fig. 13]: PR Curve after performing Hyperparameter Tuning.
 
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797900-5305296b-a233-485a-a3ba-7b826894456e.png" width="300" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797900-5305296b-a233-485a-a3ba-7b826894456e.png" width="400" />    
 
   
   
