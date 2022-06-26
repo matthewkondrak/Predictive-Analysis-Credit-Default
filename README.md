@@ -264,12 +264,12 @@ As part of a future research, I would like to continue performing different meth
   
 [Fig. 2]: ‘SEX, EDUCATION, MARRIAGE, PAY_1 through to PAY_6’ are all categorized with the default_payment_result dividing them into rate of defaults and non-defaults
   
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797676-cd968865-b387-43ab-8cf0-9788584f3951.png" width="400" />
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797676-cd968865-b387-43ab-8cf0-9788584f3951.png" width="550" />
 
 
 [Fig. 3]: The Variables ‘MARRIAGE’ and ‘EDUCATION’ and their impact on the default_payment_result. Observing the rate of default proportions.
   
-<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797688-9b24316a-3325-4d39-aae8-af1a5ba38de7.png" width="550" />
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797688-9b24316a-3325-4d39-aae8-af1a5ba38de7.png" width="650" />
 
   
 [Fig. 4:] The number and percentage of default credit clients against the non-default.
