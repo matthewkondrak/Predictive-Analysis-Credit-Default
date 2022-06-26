@@ -10,7 +10,6 @@
 * [Conclusion](#Conclusion)
 * [References](#References)
 * [Appendix A](#AppendixA)
-* [Appendix B](#AppendixB)
 
 ## Abstract
 In this project, 5 machine learning methods were performed to identify delinquency rates of credit card clients. Through the comparison of classification machine learning methods, the aim is to study the best method with the consideration of demographic features and financial aspects for each client. From the perspective of mitigating potential loss to financial institutions, model assessments were performed through performance metrics; in particular, focusing on recall, f1-score and accuracy of each model.
@@ -39,31 +38,31 @@ Furthermore, data level resampling techniques are being explored to overcome the
 ## Models
 **Logistic Regression**
 
-The logistic regression model is a classification algorithm when the targeted data is categorical in nature. It is a statistical method for analyzing a dataset when the data has a binary or multinomial output, such as when it belongs to one class or another, or if it is either a 0 or 1 [[6]](#References). While it is easy to implement, it is limited when working with non-linear data. Often, logistic regression can have the tendency to overfit the training data, which becomes amplified when there is an increase in the training data. [[ps. 1]](#AppendixA)
+The logistic regression model is a classification algorithm when the targeted data is categorical in nature. It is a statistical method for analyzing a dataset when the data has a binary or multinomial output, such as when it belongs to one class or another, or if it is either a 0 or 1 [[6]](#References). While it is easy to implement, it is limited when working with non-linear data. Often, logistic regression can have the tendency to overfit the training data, which becomes amplified when there is an increase in the training data. 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756051-89b18e73-7ecc-4c7e-bbf8-a8eafb6a3f8a.png" width="200" />
 
 **Support Vector Machines (SVM)**
 
-Support Vector Machine is a linear model that creates a hyperplane that directly separates the data into classes. This hyperplane is placed in a N-dimensional space, where N is the number of features. While logistic regression tends to focus more on maximizing the probability of two classes, SVM uses the hyperplane to maximize the separation of classes. Using the hyper-parameter, C, modifies the hyperplane’s margin to classify the training data properly. Increasing the value of C signifies more accurate training points [[7]](#References) [[ps. 2]](#AppendixA)
+Support Vector Machine is a linear model that creates a hyperplane that directly separates the data into classes. This hyperplane is placed in a N-dimensional space, where N is the number of features. While logistic regression tends to focus more on maximizing the probability of two classes, SVM uses the hyperplane to maximize the separation of classes. Using the hyper-parameter, C, modifies the hyperplane’s margin to classify the training data properly. Increasing the value of C signifies more accurate training points [[7]](#References)
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756087-46745538-f7cf-4ffb-a136-3a729d2db192.png" width="265" />
 
 **Decision Tree**
 
-The decision tree algorithm works by building a classification model that results in a tree-like structure. It follows a principle of maximization of the separation of the data. This maximization starts with the training data on a single node, where it splits into two nodes. This split happens through learning simple decision rules deduced from the training data. This splitting continues until the decision tree achieves a leaf node that contains the predicted class value. To solve the issue of overfitting, the depth of the tree gets assigned a default value. [[7]](#References) [[ps. 3]](#AppendixA)
+The decision tree algorithm works by building a classification model that results in a tree-like structure. It follows a principle of maximization of the separation of the data. This maximization starts with the training data on a single node, where it splits into two nodes. This split happens through learning simple decision rules deduced from the training data. This splitting continues until the decision tree achieves a leaf node that contains the predicted class value. To solve the issue of overfitting, the depth of the tree gets assigned a default value. [[7]](#References)
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756118-576eec5a-61a8-44ba-8c80-36968ab94e94.png" width="205" />
 
 **Naive Bayes**
 
-The Naive-Bayes algorithm is based on the Bayes theorem. This theorem assumes the independence of the predictor variables, which allows the algorithm to calculate the value of an attribute without affecting the others. [[8]](#References) It works by using characteristics and cases with large likelihood to calculate the probability of classification. [[ps. 4]](#AppendixA)
+The Naive-Bayes algorithm is based on the Bayes theorem. This theorem assumes the independence of the predictor variables, which allows the algorithm to calculate the value of an attribute without affecting the others. [[8]](#References) It works by using characteristics and cases with large likelihood to calculate the probability of classification.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756129-9f2d669c-4f60-4013-92f6-dc359fc665b1.png" width="225" />
 
 **K-Nearest Neighbors (KNN)**
 
-The K-Nearest Neighbors algorithm differs from the models in this list, by directly using the data for classification. It stores all the available data and classifies the new data based on the similarity amount, with data points classified based on how its neighbors are classified. The algorithm omits building a model first which provides the benefit of not requiring additional model construction; with k being the only adjustable parameter. [[9]](#References) The k represents the number of nearest neighbors to be included in the model. Therefore, through the value adjustment of k, the model can be made more or less flexible. [[ps. 5]](#AppendixA)
+The K-Nearest Neighbors algorithm differs from the models in this list, by directly using the data for classification. It stores all the available data and classifies the new data based on the similarity amount, with data points classified based on how its neighbors are classified. The algorithm omits building a model first which provides the benefit of not requiring additional model construction; with k being the only adjustable parameter. [[9]](#References) The k represents the number of nearest neighbors to be included in the model. Therefore, through the value adjustment of k, the model can be made more or less flexible. 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/97916773/175756136-eeab8b14-cb0f-47c0-be4a-825024204236.png" width="425" />
 
@@ -98,24 +97,24 @@ The original data types are all labeled as ‘Object’ and therefore data types
 
 **Pre-processing Data**
 
-* Renaming column ‘Pay_0’ to ‘Pay_1’ for consistency with the rest of the columns; ‘default payment next month’ to ‘default_payment_result’ for easier referencing [fig.1]
+* Renaming column ‘Pay_0’ to ‘Pay_1’ for consistency with the rest of the columns; ‘default payment next month’ to ‘default_payment_result’ for easier referencing [fig. 1](#AppendixA)
 
-* Drop ‘ID’ column as it is not part of the modeling process [fig.1]
+* Drop ‘ID’ column as it is not part of the modeling process [fig. 1](#AppendixA)
 
-* Label categorical data ‘SEX’, ‘EDUCATION’, ‘MARRIAGE’ as categorical label for easier reference [fig. 2]
+* Label categorical data ‘SEX’, ‘EDUCATION’, ‘MARRIAGE’ as categorical label for easier reference [fig. 2](#AppendixA)
 
-* Clean ‘EDUCATION’, ‘MARRIAGE’ i.e. group low counts categories in respective columns as ‘others’ to make sure it will not impact regression accuracy [fig. 3]
+* Clean ‘EDUCATION’, ‘MARRIAGE’ i.e. group low counts categories in respective columns as ‘others’ to make sure it will not impact regression accuracy [fig. 3](#AppendixA)
 
 **EDA (Univariate & Multivariate Analysis)**
 
 *Univariate Analysis*
 
-* Considering ‘SEX’, ‘EUDCATION’, ‘MARRIAGE’, ‘PAY_1 through PAY_6’, ‘default_payment_result’ as categorical variables, a bar chart was created by categorizing them as a subset of the dataset to separate them with the continuous numeric variables E.g., noted that out of 30000 credit cards, 23364 were default credit cards which is 77.9% [fig. 4]
-* Create sns.histplot and density plot for the rest of numeric variables [fig. 5]
+* Considering ‘SEX’, ‘EUDCATION’, ‘MARRIAGE’, ‘PAY_1 through PAY_6’, ‘default_payment_result’ as categorical variables, a bar chart was created by categorizing them as a subset of the dataset to separate them with the continuous numeric variables E.g., noted that out of 30000 credit cards, 23364 were default credit cards which is 77.9% [fig. 4](#AppendixA)
+* Create sns.histplot and density plot for the rest of numeric variables [fig. 5](#AppendixA)
 
 *Multivariate Analysis*
 
-* Performed multivariate analysis in relation to the target variable y = ‘default_payment_result’ via visualization of bar charts, scatter plots, and box plots to investigate the relationships against numerical and categorical features [fig. 6]
+* Performed multivariate analysis in relation to the target variable y = ‘default_payment_result’ via visualization of bar charts, scatter plots, and box plots to investigate the relationships against numerical and categorical features [fig. 6](#AppendixA)
 
 * Hypothesis tests are performed to determine if there is a relationship between default rate and categorical variables in specifically to Sex, Marital Status, Education Level H0: There is no relationship between categorical variables and default rate H1: There is a relationship between categorical variables and default rate
 
@@ -139,11 +138,11 @@ Therefore, in addition to the mean baseline model; Decision Tree, Naïve Bayes, 
 
 To improve the baseline models, feature engineering is performed through the following methods:
 
-* Multicollinearity Analysis: features with correlation coefficient >= 0.92 will be removed [fig. 7 and 8]
+* Multicollinearity Analysis: features with correlation coefficient >= 0.92 will be removed [fig. 7 and 8](#AppendixA)
 
-* Standard Scalar: perform standardization to transform their values with mean value of 0 and variance of 1 [fig. 9]
+* Standard Scalar: perform standardization to transform their values with mean value of 0 and variance of 1 [fig. 9](#AppendixA)
 
-* One-Hot Encoding: Other than dropping ‘ID’, one-hot-encoding to categorical data is being conducted to multiple categorical columns and assigned them 0 or 1. The encoded variable allows the categorical data ‘SEX’, ‘EDUCATION’, and, ‘MARRIAGE’ [fig. 10]
+* One-Hot Encoding: Other than dropping ‘ID’, one-hot-encoding to categorical data is being conducted to multiple categorical columns and assigned them 0 or 1. The encoded variable allows the categorical data ‘SEX’, ‘EDUCATION’, and, ‘MARRIAGE’ [fig. 10](#AppendixA)
 
 **Model Estimation** 
 
@@ -170,11 +169,11 @@ Performed a series of model development approaches through the following steps:
 | Logistic Regression | 0.78 | 0.25 | 0 | 0 | 0.64 |
 <p align="center"><sup>Table 1: Baseline Model Results </sup></p>
 
-Based on the table above, the ROC curve and bar chart are plotted to visualize which model has the highest accuracy [fig. 11] . It is important to note that the Logistic Regression baseline method has the highest accuracy but with 0 recall. Knowing that Recall rate is the main metric to focus on, Naive Bayes has the highest performance among all of the baseline models as it obtains 0.85 recall rate. Next is hyperparameter tuning for models to experiment different hyper-parameters and to find the best combination of hyperparameter tuning for each model.
+Based on the table above, the ROC curve and bar chart are plotted to visualize which model has the highest accuracy [fig. 11](#AppendixA). It is important to note that the Logistic Regression baseline method has the highest accuracy but with 0 recall. Knowing that Recall rate is the main metric to focus on, Naive Bayes has the highest performance among all of the baseline models as it obtains 0.85 recall rate. Next is hyperparameter tuning for models to experiment different hyper-parameters and to find the best combination of hyperparameter tuning for each model.
 
 **Model Estimation after Hyperparameter Tuning**
   
-The approach of performing hyperparameter tuning would be using the GridSearchCV package where the best parameters are selected to tune the respective models after setting a range of parameters. Then plotting ROC [fig. 12] and PR curve [fig. 13] based on the performance result.
+The approach of performing hyperparameter tuning would be using the GridSearchCV package where the best parameters are selected to tune the respective models after setting a range of parameters. Then plotting ROC [fig. 12](#AppendixA) and PR curve [fig. 13](#AppendixA) based on the performance result.
   
 | Grid Search | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 | --- | --- | --- | --- | ---| --- |
@@ -258,4 +257,73 @@ As part of a future research, I would like to continue performing different meth
 
 ## AppendixA
 
-## AppendixB
+[Fig. 1]: Renaming the column PAY_0 to PAY_1 and default payment next month to default_payment_result
+
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797659-a756cd3e-6c61-4de5-a3cb-fff0cad095fd.png" width="300" />
+ 
+  
+[Fig. 2]: ‘SEX, EDUCATION, MARRIAGE, PAY_1 through to PAY_6’ are all categorized with the default_payment_result dividing them into rate of defaults and non-defaults
+  
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797676-cd968865-b387-43ab-8cf0-9788584f3951.png" width="300" />
+
+
+[Fig. 3]: The Variables ‘MARRIAGE’ and ‘EDUCATION’ and their impact on the default_payment_result. Observing the rate of default proportions.
+  
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797688-9b24316a-3325-4d39-aae8-af1a5ba38de7.png" width="300" />
+
+  
+[Fig. 4:] The number and percentage of default credit clients against the non-default.
+  
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797708-960dadfc-e907-4554-bb1b-b89e8cb7f0ce.png" width="300" />  
+
+  
+[Fig. 5]: A density plot showcasing how the credit card limit has an impact on the default rate.
+
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797716-e9a7af4e-da36-4ed4-88b0-f0470b4d3e8a.png" width="300" />  
+
+  
+[Fig. 6]: A graph representing the impact of age on the default rate.
+
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797725-c12e749f-7fed-47bc-9f7c-0c8e47f7561c.png" width="300" />  
+  
+  
+[Fig. 7]: A multicollinearity heat map representing the correlation between various variables.
+  
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797735-7f27295c-93c4-4597-906a-75acb2e5bfca.png" width="300" />    
+
+  
+[Fig. 8]: A visual representation of the correlation of each attribute with the default_payment_result.
+
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797744-9f5d6408-0b75-46aa-9634-f698bb118132.png" width="300" />    
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797752-f15180e3-1c03-4d3e-9c86-7f65d114f550.png" width="300" />    
+
+  
+[Fig. 9]: A box plot representing the default rate distribution.
+  
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797763-5dc2c3ea-fa40-44d2-9f60-3711e5bdf694.png" width="300" />    
+
+
+[Fig. 10]: The data frame of the categorical variables.
+
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797770-dc38ae35-1c0f-4177-98fd-88680560042e.png" width="300" />    
+
+
+[Fig. 11]: A comparison of all of the baseline models and the ROC curve.
+ 
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797779-e23455cc-0c8d-4771-ab50-a2c0a0cbd27a.png" width="300" />    
+
+
+[Fig. 12]: ROC curve after performing Hyperparameter Tuning.
+ 
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797892-7fbe2e43-ea77-4b88-b107-145007fcd3bb.png" width="300" />    
+
+
+[Fig. 13]: PR Curve after performing Hyperparameter Tuning.
+
+<p align="left"> <img src="https://user-images.githubusercontent.com/97916773/175797900-5305296b-a233-485a-a3ba-7b826894456e.png" width="300" />    
+
+  
+  
+
+
+  
